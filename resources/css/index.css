@@ -1,0 +1,166 @@
+body {
+    /* width: 1440px;
+    height: 1103px; */
+    background: #FFF;
+}
+/* navbar */
+.navbar {
+    display: flex;
+    width: 1322px;
+    height: 91px;
+    padding: 17px 1047px 16px 57px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar-brand__rect {
+    width: 27px;
+    height: 9px;
+    flex-shrink: 0;
+
+    border-radius: 4.5px;
+    background: linear-gradient(96deg, #E537B9 0%, #C040DF 100%);
+}
+
+.navbar-brand  p {
+    color: var(--text-text-gray-dark, #292B2E);
+    font-family: Montserrat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 104.348% */
+    letter-spacing: 2px;
+}
+
+/* today section heading */
+.section__heading h1 {
+    color: #252B42;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+}
+
+.section__heading p {
+    color: #858585;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+}
+
+/* accordian styling */
+/* .section__accordian {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+} */
+
+.accordion__content {
+    position: absolute;
+    width: 100%; /* Adjust the width as needed */
+    background-color: #fff; /* Set a background color if needed */
+    z-index: 1000; /* Ensure the accordion content appears above other elements */
+}
+
+/* active accordion stays on top */
+.accordion-button.active {
+    z-index: 1001; /* Ensure the active accordion button appears above other elements */
+}
+
+.accordian-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.accordion-header {
+    color: var(--second-text-color, #737373);
+
+    /* H5 */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px; 
+}
+/* carousel styling */
+/* Adjust carousel controls position */
+.carousel-control-next {
+    width: 20px;
+    height: 630px;
+    flex-shrink: 0;
+    color: #737373;
+    border-radius: 10px;
+    background: var(--gray-gray-100, #CFE2FF);  
+}
+
+/* a link */
+.carousel-item a {
+    text-decoration: none;
+    background-color: #C040DF;
+}
+
+/* card styling */
+.card {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 95%;
+    height: 462px;
+    flex-shrink: 0;
+}
+.card-title {
+    color: var(--text-text-gray-dark, #292B2E);
+
+    /* H3 */
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.1px;
+}
+
+.cardBody__subtitle {
+    display:flex;
+}
+
+.cardBody__subtitle p {
+    color: var(--text-text-gray, #586069);
+
+    /* H6 */
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 215.385% */
+    letter-spacing: 0.2px;
+    margin-right: 10px;
+}
+
+.cardBody__subtitle h6 {
+    color: var(--text-text-gray, #586069);
+
+    /* H6 */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.2px;
+    margin-left: 10px;
+
+}

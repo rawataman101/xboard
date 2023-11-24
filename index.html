@@ -4,13 +4,86 @@
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
         <title>Crio Feed</title>
         <meta name="description" content="Crio Feed Website" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="resources/css/index.css">
-        </head>
+      </head>
 
         <body>
+                <!-- navigation bar -->
+                <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="#">
+                          <div class="navbar-brand__rect"></div>      
+                          <p>Crio News Feed</p>
+                        </a>
+                </nav>
 
-        <div class="h1">Write your code in this file</div>
+                <!-- today heading and subheading -->
+                <div class="section__heading">
+                        <h1>Today</h1>
+                        <p>The insights ou need to keep ahead</p>
+                </div>
+                <!-- accordian -->
+                <div class="section__accordian">
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Politics
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show accordion__content" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <!-- carousel -->
+                          <div id="carousel__card1"></div>
+                          <!-- <div class="card"> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Space
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse accordion__content" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div id="carousel__card2"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Sports
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse accordion__content" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div id="carousel__card3"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+            
+        
         <script src="resources/data/magazines.js"></script>
         <script src="resources/js/index.js"></script>
-        </body>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script> 
+        //import {getFeed} from "./js/index.js"
+          (async function() {
+            for(let i = 0; i < 3; i++) {
+              const data = await getFeed(i);
+              getCarousel(data.items, i)
+            }
+          })()
+        </script>        
+      </body>
         </html>
